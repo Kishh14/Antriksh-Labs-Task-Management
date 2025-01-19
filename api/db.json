@@ -1,0 +1,52 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Complete Assignment",
+      "description": "Frontend developer task",
+      "status": "In Progress"
+    },
+    {
+      "id": 2,
+      "title": "Review PRs",
+      "description": "Check pull requests for approval",
+      "status": "In Progress"
+    },
+    {
+      "id": 3,
+      "title": "Fix Bug #124",
+      "description": "Resolve the header alignment issue on the homepage",
+      "status": "Pending"
+    },
+    {
+      "id": 4,
+      "title": "Team Meeting",
+      "description": "Discuss project updates and next sprint goals",
+      "status": "Completed"
+    },
+    {
+      "id": 5,
+      "title": "Update Documentation",
+      "description": "Improve the API documentation for the new endpoint",
+      "status": "In Progress"
+    },
+    {
+      "id": 6,
+      "title": "Client Demo Preparation",
+      "description": "Prepare the product for a demo with the client on Friday",
+      "status": "Pending"
+    },
+    {
+      "id": 7,
+      "title": "Database Optimization",
+      "description": "Analyze and optimize slow SQL queries",
+      "status": "In Progress"
+    },
+    {
+      "id": 8,
+      "title": "Deploy New Feature",
+      "description": "Deploy the chat feature to production",
+      "status": "Pending"
+    }
+  ]
+}
