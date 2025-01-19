@@ -47,16 +47,19 @@ const DraggableTask = ({ task }) => {
     >
       {/* Task Content */}
       <div className="flex justify-between">
+        {/* Taks ID */}
         <div className="text-gray-500 dark:text-gray-400 text-xs lg:text-sm">
           Task ID: {task.id}
         </div>
       </div>
+      {/* Task Title */}
       <Link to={`/tasks/${task.id}`}>
         <h3 className="text-sm lg:text-lg my-1 font-semibold text-gray-800 dark:text-gray-200">
           {task.title}
         </h3>
       </Link>
-      {/* <p className="text-sm text-gray-600 dark:text-gray-400">{task.description}</p> */}
+
+      {/* Task Paragraph */}
       <Link to={`/tasks/${task.id}`}>
         <p
           className={`text-xs lg:text-sm text-gray-600 dark:text-gray-400 ${
@@ -74,7 +77,7 @@ const DraggableTask = ({ task }) => {
         {/* Status Badge */}
         <Badge
           variant={task.status === "In Progress" ? "outline" : "success"}
-          className={`text-xs px-3 py-1 mr-3 lg:mr-0 ${
+          className={`text-xs px-3 py-1 mr-6 lg:mr-0 ${
             task.status === "In Progress" ? "text-blue-600" : "text-green-600"
           }`}
         >

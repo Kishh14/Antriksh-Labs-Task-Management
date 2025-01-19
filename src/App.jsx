@@ -25,7 +25,7 @@ const App = () => {
       <Sidebar />
 
       <main className="flex-1 p-4 lg:p-8 lg:pt-3">
-        <Header username={"Krish"} />
+        <Header username={"Admin"} />
         <Routes>
           {/* Task List Route */}
           <Route

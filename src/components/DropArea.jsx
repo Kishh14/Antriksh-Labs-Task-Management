@@ -4,7 +4,7 @@ import { useDrop } from "react-dnd";
 const DropArea = ({ onTaskDrop }) => {
   const [{ isOver, canDrop }, drop] = useDrop(() => ({
     accept: "TASK", // Accepts items of type 'TASK'
-    drop: (item) => onTaskDrop(item.id), // Call the onTaskDrop handler with the task ID
+    drop: (item) => onTaskDrop(item.id),
     collect: (monitor) => ({
       isOver: monitor.isOver(),
       canDrop: monitor.canDrop(),
@@ -14,7 +14,7 @@ const DropArea = ({ onTaskDrop }) => {
   return (
     <div
       ref={drop}
-      className={`lg:w-64 max-md:h-36 mt-4 lg:mt-0 text-center border-2 border-dashed rounded-lg flex items-center justify-center ${
+      className={`hidden lg:flex lg:w-64 max-md:h-36 mt-4 lg:mt-0 text-center border-2 border-dashed rounded-lg items-center justify-center ${
         isOver
           ? "bg-green-100 border-green-600"
           : "bg-gray-100 dark:bg-gray-900 dark:text-gray-400 dark:border-gray-600 border-gray-400"

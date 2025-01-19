@@ -89,14 +89,13 @@ html.dark {
   --drop-area-bg-color: #3b3b3b;
 }
 
-/* Apply theme variables */
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
 
 #root {
-  background: var(--bg-color); /* Ensure this takes the correct background color */
+  background: var(--bg-color); 
 }
 
 .scrollbar-hidden::-webkit-scrollbar{

@@ -19,7 +19,7 @@ const TaskDetails = () => {
     const confirmation = confirm("Do you really want to delete?");
     if (confirmation) {
       dispatch(deleteTask(task.id));
-      navigate("/tasks");
+      navigate("/");
     }
   };
 
@@ -28,11 +28,14 @@ const TaskDetails = () => {
       <h1 className="lg:text-2xl dark:text-gray-500 font-bold mt-4 lg:mt-0 mb-4">
         Task Details
       </h1>
+      {/* Task Details */}
       <div className="bg-white dark:bg-black shadow-md rounded-lg p-10">
         <div className="lg:flex justify-between items-center mb-3">
+          {/* Task Title */}
           <h2 className="lg:text-xl dark:text-gray-200 font-semibold lg:mb-2">
             {task.title}
           </h2>
+          {/* Task Status */}
           <span
             className={`inline-block p-1 lg:px-4 lg:py-2 text-xs lg:text-sm font-bold rounded-full ${
               task.status === "In Progress"
@@ -43,8 +46,12 @@ const TaskDetails = () => {
             {task.status}
           </span>
         </div>
-        <p className="text-gray-700 dark:text-gray-400 text-sm lg:text-base">{task.description}</p>
+        {/* Task Paragraph */}
+        <p className="text-gray-700 dark:text-gray-400 text-sm lg:text-base">
+          {task.description}
+        </p>
 
+        {/* Links */}
         <div className="flex justify-between mt-3">
           <Link
             to="/"
