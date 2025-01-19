@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 // Fetch tasks from the mock API
 export const fetchTasks = createAsyncThunk("tasks/fetchTasks", async () => {
-  const response = await fetch("http://localhost:5000/tasks");
+  const response = await fetch("https://antriksh-labs-task-management-api.onrender.com/tasks");
   if (!response.ok) {
     throw new Error("Failed to fetch tasks");
   }
@@ -11,7 +11,7 @@ export const fetchTasks = createAsyncThunk("tasks/fetchTasks", async () => {
 
 // Add task to the mock API
 export const addTask = createAsyncThunk("tasks/addTask", async (newTask) => {
-  const response = await fetch("http://localhost:5000/tasks", {
+  const response = await fetch("https://antriksh-labs-task-management-api.onrender.com/tasks", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(newTask),
@@ -26,7 +26,7 @@ export const addTask = createAsyncThunk("tasks/addTask", async (newTask) => {
 export const deleteTask = createAsyncThunk(
   "tasks/deleteTask",
   async (taskId) => {
-    const response = await fetch(`http://localhost:5000/tasks/${taskId}`, {
+    const response = await fetch(`https://antriksh-labs-task-management-api.onrender.com/tasks/${taskId}`, {
       method: "DELETE",
     });
     if (!response.ok) {
