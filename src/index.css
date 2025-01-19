@@ -67,6 +67,10 @@
   }
 }
 
+html{
+  overflow: hidden;
+}
+
 /* Default Light Theme */
 html {
   --bg-color: white;
@@ -93,4 +97,8 @@ body {
 
 #root {
   background: var(--bg-color); /* Ensure this takes the correct background color */
+}
+
+.scrollbar-hidden::-webkit-scrollbar{
+  display: none;
 }

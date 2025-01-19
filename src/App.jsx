@@ -24,12 +24,12 @@ const App = () => {
     <div className="min-h-screen bg-[#F8FAFC] dark:bg-gray-950 flex font-[Inter] text-[#1E293B]">
       <Sidebar />
 
-      <main className="flex-1 p-4 lg:p-8">
+      <main className="flex-1 p-4 lg:p-8 lg:pt-3">
         <Header username={"Krish"} />
         <Routes>
           {/* Task List Route */}
           <Route
-            path="/tasks"
+            path="/"
             element={<TaskList tasks={tasks} handleTaskDrop={handleTaskDrop} />}
           />
 

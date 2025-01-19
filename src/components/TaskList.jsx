@@ -36,7 +36,7 @@ function TaskList({ tasks, handleTaskDrop }) {
   return (
     <div className="lg:flex">
       {/* Task List Section */}
-      <div className="flex lg:px-8 lg:h-full mt-4 lg:mt-9">
+      <div className="flex lg:px-8 lg:h-full">
         <Card className="p-4">
           <div className="flex justify-between items-center mb-4">
             <h2 className="lg:text-lg font-bold dark:text-gray-200">My Tasks</h2>
@@ -86,7 +86,7 @@ function TaskList({ tasks, handleTaskDrop }) {
           </div>
           <Separator className="mb-4" />
 
-          <div className="grid h-[320px] overflow-auto lg:h-fit grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid h-[320px] overflow-auto scrollbar-hidden lg:h-[580px] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {tasks.map((task) => (
               <DraggableTask key={task.id} task={task} />
             ))}

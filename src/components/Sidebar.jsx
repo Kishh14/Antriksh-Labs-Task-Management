@@ -17,7 +17,7 @@ const Sidebar = () => {
   return (
     <>
       {/* Hamburger icon for small screens */}
-      <div className={`md:hidden p-4 absolute top-[1.7rem] left-1 z-50`}>
+      <div className={`md:hidden p-4 absolute top-[1.2rem] left-1 z-50`}>
         <button className="text-lg dark:text-white" onClick={toggleSidebar}>
           {isSidebarVisible ? <AiOutlineClose /> : <AiOutlineMenu />}
         </button>
@@ -28,7 +28,7 @@ const Sidebar = () => {
         } bg-white rounded-none transition-all h-screen absolute lg:static lg:block shadow-md dark:bg-gray-950 dark:text-white`}
       >
         {/* Sidebar Header */}
-        <div className="py-8 border-b border-gray-300 dark:border-gray-600 relative">
+        <div className="py-6 border-b border-gray-300 dark:border-gray-600 relative">
           <h2 className="lg:text-xl mt-2 font-bold text-center dark:text-gray-200">
             Antriksh Labs
           </h2>
@@ -44,7 +44,7 @@ const Sidebar = () => {
               <AiOutlineHome className="mr-2 text-xl ml-1" /> Dashboard
             </Button>
           </Link>
-          <Link to="/tasks">
+          <Link to="/">
             <Button
               variant="ghost"
               className="w-full justify-start mb-3 dark:text-gray-200 dark:hover:text-black text-gray-700 hover:bg-gray-100 flex items-center"

@@ -47,19 +47,19 @@ const DraggableTask = ({ task }) => {
     >
       {/* Task Content */}
       <div className="flex justify-between">
-        <div className="text-gray-500 dark:text-gray-400 text-sm">
+        <div className="text-gray-500 dark:text-gray-400 text-xs lg:text-sm">
           Task ID: {task.id}
         </div>
       </div>
       <Link to={`/tasks/${task.id}`}>
-        <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+        <h3 className="text-sm lg:text-lg my-1 font-semibold text-gray-800 dark:text-gray-200">
           {task.title}
         </h3>
       </Link>
       {/* <p className="text-sm text-gray-600 dark:text-gray-400">{task.description}</p> */}
       <Link to={`/tasks/${task.id}`}>
         <p
-          className={`text-sm text-gray-600 dark:text-gray-400 ${
+          className={`text-xs lg:text-sm text-gray-600 dark:text-gray-400 ${
             task.description.length > 60 ? "truncate" : ""
           }`}
           title={task.description}
@@ -70,11 +70,11 @@ const DraggableTask = ({ task }) => {
         </p>
       </Link>
 
-      <div className="mt-5 flex justify-between items-center absolute bottom-3 gap-9">
+      <div className="mt-5 flex justify-between items-center absolute bottom-3 lg:gap-9">
         {/* Status Badge */}
         <Badge
           variant={task.status === "In Progress" ? "outline" : "success"}
-          className={`text-xs px-3 py-1 ${
+          className={`text-xs px-3 py-1 mr-3 lg:mr-0 ${
             task.status === "In Progress" ? "text-blue-600" : "text-green-600"
           }`}
         >
